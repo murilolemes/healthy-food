@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiSearch } from 'react-icons/fi';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaRegCopyright } from 'react-icons/fa';
 
 import food1 from '../../assets/comida_1.svg';
 import food2 from '../../assets/comida_2.svg';
@@ -22,6 +22,8 @@ import {
   BestRecipes,
   BestServices,
   OurBlog,
+  Member,
+  Footer,
 } from './styles';
 
 const Home: React.FC = () => (
@@ -127,65 +129,88 @@ const Home: React.FC = () => (
             Vokalia and Consonantia, there live the blind texts.
           </p>
         </div>
-        <div id="divCardsBlog">
-          <div className="cardBlog">
-            <Link to="/">
-              <img src={blogImg1} alt="Imagem Blog 1" />
-              <div className="descriptionCardBlog">
-                <p>Quick-start guide to nuts and seeds</p>
-                <div className="descriptionNameAvatar">
-                  <div className="imgAvatar">
-                    <FaUser size={30} />
+        <div id="divContainerBlog">
+          <div id="divCardsBlog">
+            <div className="cardBlog">
+              <Link to="/">
+                <img src={blogImg1} alt="Imagem Blog 1" />
+                <div className="descriptionCardBlog">
+                  <p>Quick-start guide to nuts and seeds</p>
+                  <div className="descriptionNameAvatar">
+                    <div className="imgAvatar">
+                      <FaUser size={30} />
+                    </div>
+                    <p>Kevin Ibrahim</p>
                   </div>
-                  <p>Kevin Ibrahim</p>
                 </div>
-              </div>
-            </Link>
-          </div>
-          <div className="cardBlog">
-            <Link to="/">
-              <img src={blogImg2} alt="Imagem Blog 2" />
-              <div className="descriptionCardBlog">
-                <p>Nutrition: Tips for Improving Your Health</p>
-                <div className="descriptionNameAvatar">
-                  <div className="imgAvatar">
-                    <FaUser size={30} />
+              </Link>
+            </div>
+            <div className="cardBlog">
+              <Link to="/">
+                <img src={blogImg2} alt="Imagem Blog 2" />
+                <div className="descriptionCardBlog">
+                  <p>Nutrition: Tips for Improving Your Health</p>
+                  <div className="descriptionNameAvatar">
+                    <div className="imgAvatar">
+                      <FaUser size={30} />
+                    </div>
+                    <p>Mike Jackson</p>
                   </div>
-                  <p>Mike Jackson</p>
                 </div>
-              </div>
-            </Link>
-          </div>
-          <div className="cardBlog">
-            <Link to="/">
-              <img src={blogImg3} alt="Imagem Blog 3" />
-              <div className="descriptionCardBlog">
-                <p>The top 10 benefits of eating healthy</p>
-                <div className="descriptionNameAvatar">
-                  <div className="imgAvatar">
-                    <FaUser size={30} />
+              </Link>
+            </div>
+            <div className="cardBlog">
+              <Link to="/">
+                <img src={blogImg3} alt="Imagem Blog 3" />
+                <div className="descriptionCardBlog">
+                  <p>The top 10 benefits of eating healthy</p>
+                  <div className="descriptionNameAvatar">
+                    <div className="imgAvatar">
+                      <FaUser size={30} />
+                    </div>
+                    <p>Bryan McGregor</p>
                   </div>
-                  <p>Bryan McGregor</p>
                 </div>
-              </div>
-            </Link>
-          </div>
-          <div className="cardBlog">
-            <Link to="/">
-              <img src={blogImg4} alt="Imagem Blog 4" />
-              <div className="descriptionCardBlog">
-                <p>What Makes a Healthy Diet?</p>
-                <div className="descriptionNameAvatar">
-                  <div className="imgAvatar">
-                    <FaUser size={30} />
+              </Link>
+            </div>
+            <div className="cardBlog">
+              <Link to="/">
+                <img src={blogImg4} alt="Imagem Blog 4" />
+                <div className="descriptionCardBlog">
+                  <p>What Makes a Healthy Diet?</p>
+                  <div className="descriptionNameAvatar">
+                    <div className="imgAvatar">
+                      <FaUser size={30} />
+                    </div>
+                    <p>Jashua</p>
                   </div>
-                  <p>Jashua</p>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
         </div>
       </OurBlog>
+      <Member>
+        <div id="contentMember">
+          <h2>Join our membership to get special offer</h2>
+          <div>
+            <input type="text" placeholder="Enter your email address" />
+            <button type="button"> Join</button>
+          </div>
+        </div>
+      </Member>
+      <Footer>
+        <div id="copyRights">
+          <p>
+            <FaRegCopyright size={13} />
+            Copyrights 2019 Stack. All Rights Reserved.
+          </p>
+        </div>
+        <div id="privacyTerms">
+          <p>Privacy Policy</p>
+          <p>Terms and Conditions</p>
+        </div>
+      </Footer>
     </Content>
   </Container>
 );

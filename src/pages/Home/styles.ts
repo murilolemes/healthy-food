@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Illustration from '../../assets/Illustration.svg';
+import BlocoFinal from '../../assets/bloco_final_image.svg';
 
 export const Container = styled.div``;
 
@@ -8,7 +9,7 @@ export const Content = styled.div``;
 
 export const ContetNewRecipe = styled.div`
   height: 768px;
-  padding: 0 160px;
+  padding: 0 132px;
   background: url(${Illustration}) no-repeat top right;
 `;
 
@@ -140,7 +141,6 @@ export const NewRecipe = styled.div`
 
 export const BestRecipes = styled.div`
   height: 768px;
-  padding: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,7 +218,6 @@ export const BestRecipes = styled.div`
 
 export const BestServices = styled.div`
   height: 768px;
-  padding: 48px;
   display: flex;
   align-items: center;
 
@@ -260,11 +259,9 @@ export const BestServices = styled.div`
 export const OurBlog = styled.div`
   width: 100%;
   height: 768px;
-  padding: 20px 48px 48px 48px;
   display: flex;
   flex-direction: column;
-
-  border: 1px solid blue;
+  align-items: center;
 
   #textOurBlog {
     width: 510px;
@@ -283,83 +280,178 @@ export const OurBlog = styled.div`
     }
   }
 
-  #divCardsBlog {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    overflow-x: hidden;
+  #divContainerBlog {
+    width: 100%;
+    padding-left: 100px;
 
-    border: 1px solid red;
+    #divCardsBlog {
+      display: flex;
+      align-items: center;
+      overflow-x: hidden;
+      padding: 40px;
 
-    .cardBlog {
-      width: 348px;
-      height: 450px;
-      border-radius: 7px;
-      box-shadow: 0 15px 20px;
+      .cardBlog {
+        width: 348px;
+        height: 450px;
+        border-radius: 7px;
+        box-shadow: 0 0 10px;
 
-      & + .cardBlog {
-        margin-left: 24px;
-      }
-
-      a {
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        height: 100%;
-
-        img {
-          width: 348px;
-          height: 248px;
+        & + .cardBlog {
+          margin-left: 24px;
         }
 
-        .descriptionCardBlog {
-          width: 100%;
-          height: 100%;
-          padding: 20px;
+        a {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          justify-content: space-between;
+          text-decoration: none;
+          height: 100%;
 
-          p {
-            font-family: 'Montserrat';
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 34px;
-            color: #1d164d;
+          img {
+            width: 348px;
+            height: 248px;
           }
 
-          .descriptionNameAvatar {
+          .descriptionCardBlog {
             width: 100%;
+            height: 100%;
+            padding: 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-
-            .imgAvatar {
-              width: 52px;
-              height: 52px;
-              border-radius: 50%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              box-shadow: 0 0 3px #bcbcbc;
-              margin-right: 10px;
-
-              svg {
-                color: #bcbcbc;
-                opacity: 0.5;
-              }
-            }
+            justify-content: space-between;
 
             p {
-              font-family: 'Mulish';
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 20px;
-              color: #9e9baf;
+              font-family: 'Montserrat';
+              font-size: 24px;
+              font-weight: bold;
+              line-height: 34px;
+              color: #1d164d;
+            }
+
+            .descriptionNameAvatar {
+              width: 100%;
+              display: flex;
+              align-items: center;
+
+              .imgAvatar {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 3px #bcbcbc;
+                margin-right: 10px;
+
+                svg {
+                  color: #bcbcbc;
+                  opacity: 0.5;
+                }
+              }
+
+              p {
+                font-family: 'Mulish';
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                color: #9e9baf;
+              }
             }
           }
         }
       }
+    }
+  }
+`;
+
+export const Member = styled.div`
+  width: 100%;
+  height: 672px;
+  display: flex;
+  align-items: center;
+  background: url(${BlocoFinal}) no-repeat top right;
+  padding: 0 132px;
+  margin-bottom: 50px;
+
+  #contentMember {
+    width: 454px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 32px;
+      line-height: 43px;
+    }
+
+    div {
+      width: 100%;
+      height: 52px;
+      display: flex;
+
+      input {
+        width: 100%;
+        border: 1px solid #707070;
+        padding: 24px;
+        border-radius: 5px;
+
+        ::placeholder {
+          font-size: 16px;
+          color: #9e9baf;
+        }
+      }
+
+      button {
+        width: 90px;
+        border-radius: 5px;
+        margin-left: 16px;
+        background: #badc58;
+        border: 0;
+        box-shadow: 0 0 10px #badc58;
+        font-size: 16px;
+        color: #fff;
+      }
+    }
+  }
+`;
+
+export const Footer = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 132px;
+
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  #copyRights {
+    p {
+      display: flex;
+      align-items: center;
+      color: #1d164d;
+
+      svg {
+        margin-right: 5px;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  #privacyTerms {
+    justify-content: flex-end;
+
+    p {
+      margin-left: 32px;
     }
   }
 `;
