@@ -52,14 +52,12 @@ const Home: React.FC = () => (
           </div>
         </Header>
         <NewRecipe>
+          <h2>Ready for Trying a new recipe?</h2>
           <div>
-            <h2>Ready for Trying a new recipe?</h2>
-            <div>
-              <input type="text" placeholder="Search healthy recipes" />
-              <button type="button">
-                <FiSearch />
-              </button>
-            </div>
+            <input type="text" placeholder="Search healthy recipes" />
+            <button type="button">
+              <FiSearch />
+            </button>
           </div>
         </NewRecipe>
       </ContetNewRecipe>
