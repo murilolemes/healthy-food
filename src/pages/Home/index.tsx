@@ -7,7 +7,6 @@ import food1 from '../../assets/comida_1.svg';
 import food2 from '../../assets/comida_2.svg';
 import food3 from '../../assets/comida_3.svg';
 import food4 from '../../assets/comida_4.svg';
-import blocoServicesImg from '../../assets/bloco_services.svg';
 import blogImg1 from '../../assets/blog_image_1.svg';
 import blogImg2 from '../../assets/bloco_image_2.svg';
 import blogImg3 from '../../assets/bloco_image_3.svg';
@@ -101,7 +100,7 @@ const Home: React.FC = () => (
         </div>
       </BestRecipes>
       <BestServices>
-        <img src={blocoServicesImg} alt="Services" />
+        {/* <img src={blocoServicesImg} alt="Services" /> */}
         <div>
           <h2>The best services ready To serve you</h2>
           <p>

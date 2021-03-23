@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-// import { shade } from 'polished';
 
 import Illustration from '../../assets/Illustration.svg';
 import BlocoFinal from '../../assets/bloco_final_image.svg';
+import blocoServicesImg from '../../assets/bloco_services.svg';
 
 export const Container = styled.div`
   @media (max-width: 425px) {
@@ -10,15 +10,25 @@ export const Container = styled.div`
   }
 
   @media (min-width: 426px) {
+    max-width: 499px;
+  }
+
+  @media (min-width: 500px) {
     max-width: 768px;
+  }
+
+  @media (min-width: 769px) {
+    max-width: 1024px;
+  }
+
+  @media (min-width: 1025px) {
+    max-width: 1366px;
   }
 `;
 
 export const Content = styled.div``;
 
 export const ContetNewRecipe = styled.div`
-  /* height: 768px; */
-  /* padding: 0 132px; */
   display: flex;
   flex-direction: column;
   background: url(${Illustration}) no-repeat top right;
@@ -29,19 +39,22 @@ export const ContetNewRecipe = styled.div`
     background-position: -216px;
     padding: 0;
   }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    height: 744px;
+    padding: 15px 10px;
+    background-position: -100px;
+  }
+
+  @media (min-width: 600px) {
+    background-position: right;
+    padding: 20px 30px;
+  }
 `;
 
 export const Header = styled.div`
-  /* width: 100%; */
-  /* height: 102px; */
   display: flex;
-  /* align-items: center;
-  justify-content: space-between; */
-
-  h1 {
-    /* font-size: 32px; */
-    color: #badc58;
-  }
 
   div {
     ul {
@@ -49,7 +62,6 @@ export const Header = styled.div`
       align-items: center;
 
       li {
-        /* height: 52px; */
         color: #fff;
         font-weight: 600;
         list-style-type: none;
@@ -77,8 +89,6 @@ export const Header = styled.div`
         }
 
         #register {
-          /* width: 130px; */
-          /* height: 52px; */
           border: 0;
           background: #fff;
           color: #badc58;
@@ -121,16 +131,65 @@ export const Header = styled.div`
       }
     }
   }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 40px;
+      color: #fff;
+    }
+
+    div {
+      margin-top: 10px;
+      ul {
+        li {
+          a {
+            text-align: center;
+            color: #fff;
+          }
+          #register {
+            width: 110px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      color: #badc58;
+    }
+
+    div {
+      margin-top: 0;
+      ul {
+        li {
+          height: 52px;
+          a {
+            font-size: 20px;
+          }
+          #register {
+            width: 130px;
+            height: 52px;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const NewRecipe = styled.div`
-  /* height: 600px; */
-
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* width: 412px; */
-  /* height: 284px; */
 
   h2 {
     font-size: 48px;
@@ -170,10 +229,6 @@ export const NewRecipe = styled.div`
       transition: box-shadow 0.4s;
       box-shadow: 0 0 5px #fff;
 
-      /* :hover {
-        box-shadow: 0 0 10px #fff;
-      } */
-
       svg {
         width: 24px;
         height: 24px;
@@ -189,18 +244,51 @@ export const NewRecipe = styled.div`
 
     h2 {
       text-align: center;
+      text-shadow: 0 0 10px #fff;
+    }
+  }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      max-width: 490px;
+      text-align: center;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    div {
+      width: 490px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    align-items: center;
+    width: 490px;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      max-width: 490px;
+      text-align: left;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    div {
+      width: 490px;
     }
   }
 `;
 
 export const BestRecipes = styled.div`
-  /* height: 768px; */
   display: flex;
   flex-direction: column;
   align-items: center;
 
   #textBestRecipes {
-    /* width: 510px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -224,8 +312,6 @@ export const BestRecipes = styled.div`
     margin-top: 32px;
 
     .cardRecipe {
-      /* width: 528px; */
-      /* height: 226px; */
       margin: 18px;
       display: flex;
       align-items: center;
@@ -233,26 +319,17 @@ export const BestRecipes = styled.div`
       border-radius: 7px;
       box-shadow: 0 15px 20px;
 
-      /* img {
-        width: 254px;
-        height: 226px;
-      } */
-
       div {
         width: 100%;
-        /* padding: 32px; */
 
         p {
           font-family: 'Montserrat';
-          /* font-size: 24px; */
           font-weight: bold;
           line-height: 34px;
           color: #1d164d;
         }
 
         button {
-          /* width: 134px; */
-          /* height: 48px; */
           border: 0;
           border-radius: 7px;
           font-size: 16px;
@@ -303,16 +380,49 @@ export const BestRecipes = styled.div`
       }
     }
   }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    padding: 0 10px;
+
+    #textBestRecipes {
+      width: 490px;
+    }
+
+    #divCardsRecipe {
+      .cardRecipe {
+        width: 490px;
+        height: 210px;
+
+        img {
+          width: 238px;
+          height: 210px;
+        }
+
+        div {
+          width: 100%;
+          height: 100%;
+          padding: 32px;
+
+          p {
+            font-size: 24px;
+          }
+
+          button {
+            width: 134px;
+            height: 48px;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const BestServices = styled.div`
-  /* height: 768px; */
   display: flex;
   align-items: center;
 
   div {
-    /* width: 398px; */
-
     h2 {
       font-size: 32px;
       line-height: 42px;
@@ -347,10 +457,7 @@ export const BestServices = styled.div`
   @media (max-width: 499px) {
     width: 100%;
     padding: 15px 10px;
-
-    img {
-      display: none;
-    }
+    background: none;
 
     div {
       width: 100%;
@@ -367,17 +474,65 @@ export const BestServices = styled.div`
       }
     }
   }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 10px;
+
+    div {
+      width: 490px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (min-width: 962px) {
+    height: 726px;
+    justify-content: flex-end;
+    background: url(${blocoServicesImg}) no-repeat top left;
+  }
+
+  @media (min-width: 1025px) {
+    div {
+      width: 490px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: left;
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  @media (min-width: 1126px) {
+    div {
+      margin-right: 150px;
+    }
+  }
 `;
 
 export const OurBlog = styled.div`
   width: 100%;
-  /* height: 768px; */
   display: flex;
   flex-direction: column;
   align-items: center;
 
   #textOurBlog {
-    /* width: 510px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -395,13 +550,11 @@ export const OurBlog = styled.div`
 
   #divContainerBlog {
     width: 100%;
-    /* padding-left: 100px; */
 
     #divCardsBlog {
       display: flex;
       align-items: center;
       overflow-x: hidden;
-      /* padding: 40px; */
 
       .cardBlog {
         max-width: 348px;
@@ -420,7 +573,6 @@ export const OurBlog = styled.div`
           height: 100%;
 
           img {
-            /* width: 348px; */
             height: 248px;
           }
 
@@ -491,6 +643,31 @@ export const OurBlog = styled.div`
       }
     }
   }
+
+  @media (min-width: 500px) {
+    width: 100%;
+
+    #textOurBlog {
+      width: 490px;
+      padding: 0 10px;
+    }
+
+    #divContainerBlog {
+      width: 100%;
+
+      #divCardsBlog {
+        padding: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 1025px) {
+    #divContainerBlog {
+      #divCardsBlog {
+        padding: 30px;
+      }
+    }
+  }
 `;
 
 export const Member = styled.div`
@@ -499,15 +676,9 @@ export const Member = styled.div`
   display: flex;
   align-items: center;
   background: url(${BlocoFinal}) no-repeat top right;
-  /* padding: 0 132px; */
-  /* margin-bottom: 50px; */
 
   #contentMember {
-    /* width: 454px; */
-    /* height: 168px; */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
     h2 {
       font-size: 32px;
@@ -522,7 +693,7 @@ export const Member = styled.div`
       input {
         width: 100%;
         border: 1px solid #707070;
-        padding: 24px;
+        padding: 10px 24px;
         border-radius: 5px;
 
         ::placeholder {
@@ -537,7 +708,7 @@ export const Member = styled.div`
         margin-left: 16px;
         background: #badc58;
         border: 0;
-        box-shadow: 0 0 10px #badc58;
+        box-shadow: 0 0 5px #fff;
         font-size: 16px;
         color: #fff;
       }
@@ -553,7 +724,36 @@ export const Member = styled.div`
       width: 100%;
       height: 100%;
       padding: 20px 0;
+      flex-direction: column;
+      justify-content: space-between;
     }
+  }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    padding: 0 10px;
+    background-position: right;
+    justify-content: center;
+
+    #contentMember {
+      width: 490px;
+      height: 100%;
+      padding: 20px 0;
+      flex-direction: column;
+      justify-content: center;
+
+      div {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 1025px) {
+    padding: 0 30px;
   }
 `;
 
@@ -561,9 +761,6 @@ export const Footer = styled.div`
   width: 100%;
   height: 100px;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  /* padding: 0 132px; */
 
   div {
     width: 100%;
@@ -585,14 +782,6 @@ export const Footer = styled.div`
         margin-right: 5px;
         opacity: 0.8;
       }
-    }
-  }
-
-  #privacyTerms {
-    /* justify-content: flex-end; */
-
-    p {
-      /* margin-left: 32px; */
     }
   }
 
@@ -619,11 +808,6 @@ export const Footer = styled.div`
     #copyRights {
       p {
         text-align: center;
-
-        svg {
-          margin-right: 5px;
-          opacity: 0.8;
-        }
       }
     }
 
@@ -638,5 +822,80 @@ export const Footer = styled.div`
         }
       }
     }
+  }
+
+  @media (min-width: 500px) {
+    width: 100%;
+    padding: 10px 10px;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & + div {
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    #copyRights {
+      p {
+        text-align: center;
+      }
+    }
+
+    #privacyTerms {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        & + p {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      & + div {
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    #privacyTerms {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      p {
+        & + p {
+          margin-top: 0;
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    padding: 0 30px;
   }
 `;
